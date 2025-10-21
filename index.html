@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculus Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+        <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <h1>Calculus Calculator</h1>
+        <form id="calc-form">
+            <label for="expr">Expression:</label>
+            <input type="text" id="expr" name="expr" required>
+            <br>
+            <label for="operation">Operation</label>
+            <select id="operation" name="operation">
+                <option value="differentiate">Differentiation</option>
+                <option value="integrate">Integration (Indefinite)</option>
+                <option value="definite_integral">Integration (Definite)</option>
+                <option value="limits">Limits</option>
+                <option value="taylor series">Taylor Series</option>
+                <option value="First-Order Linear ODE">First-Order Differential Equation</option>
+                <option value="Second-Order Linear ODE">Second-Order Differential Equation</option>
+                <option value="Simpson's Rule">Simpson's Rule</option>
+                <option value="Volumes of Revolution">Volumes Of Revolution</option>
+                <option value="Summations">Summations</option>
+            </select>
+            <br>
+            <div id="extra-fields"></div>
+            <button type="submit"  id="calculate">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </body>
+</html>
